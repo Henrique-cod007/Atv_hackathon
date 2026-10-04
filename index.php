@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 include "conexao.php";
 
@@ -41,8 +40,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
         <button type="submit">enviar</button>
     </form>
 </body>
-=======
-<!-- na parte em azul colocar uma imagem de materias de tecnologia  -->
+
 <?php
 include "conexao.php";
 
@@ -144,5 +142,4 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     </article>
     </main>
 </body>
->>>>>>> 7456626 (Segundo commit - ajustes no CSS)
 </html>
