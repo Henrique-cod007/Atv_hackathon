@@ -4,49 +4,6 @@ include "conexao.php";
 $nome = "";
 $email = "";
 $area_interesse = "";
-$mensagem = "";
-if($_SERVER["REQUEST_METHOD"]==="POST"){
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $area_interesse = $_POST["area_interesse"];
-    if($nome === "" || $email === "" || $area_interesse){
-        $mensagem = "preencha todos os campos";
-    }else{
-        $sql = "INSERT INTO usuario (nome, email, area_interesse) VALUES ('$nome','$email','$area_interesse')";
-        $conexao->query($sql);
-        $mensagem = "200";
-        echo "{$mensagem}";
-        $nome = "";
-        $email = "";
-        $area_interesse = "";
-    }
-}
-
-
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="index.php" method="post">
-        <input type="text" name="nome" placeholder="nome" required >
-        <input type="email" name="email" placeholder="email" required >
-        <input type="text" name="area_interesse" placeholder="área de interesse" required>
-
-        <button type="submit">enviar</button>
-    </form>
-</body>
-
-<?php
-include "conexao.php";
-
-$nome = "";
-$email = "";
-$area_interesse = "";
 
 $mensagem = "";
 if($_SERVER["REQUEST_METHOD"] === "POST"){
@@ -77,11 +34,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 <style>
     body{
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #4057a3;
+        background-color: rgba(64, 87, 163, 0.32);
     }
 
     #art_01{
-        background-image: url("img/OIP.webp");
+        background-image: url("img/Copilot_20261005_184127.png");
         background-position: center;   
         background-size: cover;        
         background-repeat: no-repeat;  
@@ -98,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     }
     #sec_01{
         position: absolute;
-        background-color: wheat;
+        background-color: rgb(64, 87, 163);       
         height: 500px;
         width: 450px;
         border-radius: 20px;
@@ -136,7 +93,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         <input id="receber" type="email" name="email" placeholder="email"  ><br>
         <input id="receber" type="text" name="area_interesse" placeholder="área de interesse" ><br>
 
-        <button id="enviar_01" type="submit">enviar</button>
+        <button id="enviar_01" type="submit">enviar</button><br>
+        <a href="#">vizualizar pá</a>
     </form>
     </section>
     </article>
