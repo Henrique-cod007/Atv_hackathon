@@ -36,10 +36,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         font-family: Arial, Helvetica, sans-serif;
         background-color: rgba(64, 87, 163, 0.32);
     }
-
+    
     #art_01{
+
         background-image: url("img/Copilot_20261005_184127.png");
-        background-position: center;   
+        background-position: left;   
         background-size: cover;        
         background-repeat: no-repeat;  
         backface-visibility: hidden;
@@ -52,14 +53,26 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         width: 95%;
         border-radius: 20px;
         
+        
+    }
+    #art_pri{
+        position: absolute;
+        background-color: rgb(249, 249, 252);   
+        height: 87%;
+        width: 87%;
+        border-radius: 20px;
+        left: 50%;
+        top: 50%;
+        transform: translate( -50% , -50%);
+        box-shadow: 0px 0px 10px rgb(62, 99, 218) ;
     }
     #sec_01{
         position: absolute;
         background-color: rgb(64, 87, 163);       
-        height: 500px;
-        width: 450px;
+        height: 100%;
+        width: 56%;
         border-radius: 20px;
-        left: 50%;
+        left: 72%;
         top: 50%;
 
         transform: translate( -50% , -50%);
@@ -76,28 +89,75 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     #enviar_01{
         background-color: white;
         height: 35px ;
-        width: 70%;
-        margin: 20px auto;
-        margin-top: 25%;   
+        width: 50%;
+        margin: 20px auto;  
         border-radius: 20px;   
-        border: 5px solid white;   
+        border: 5px solid white; 
+        margin-bottom: 6%;  
     }
+    #formu{
+        margin-top: 20%;
+    }
+    #incricoes{
+            background-color: white;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 10px;
+            text-decoration: none;
+    }
+    #texto{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        position:absolute;
+        height: 70%;
+        width: auto;
+
+        left: 10%;
+        top: 13%;
+        font-size: 30px;
+        
+    }
+   
+    @media (max-width: 1030px) { 
+        #sec_01{
+            width: 100%;
+            height: 68%;
+            position: relative;
+
+            left: 50%;
+            top: 60%;
+            transform: none;
+
+        }
+        #texto{
+            position: relative;
+            top: 1%;
+            font-size: 20px;
+            transform: none;
+        }
+        
+    }
+    
 
 </style>
 <body>
-    <main>
+    
     <article id="art_01">
+    <article id="art_pri">
+        <div id="texto">
+        <h1 style="" >Hackathon</h1>
+        <p>As incrições começaram<br>Se increva já</p>
+        </div>
     <section id="sec_01">
-    <form action="index.php" method="POST">
+    <form id="formu" action="index.php" method="POST">
         <input id="receber" type="text" name="nome" placeholder="nome"  ><br>
         <input id="receber" type="email" name="email" placeholder="email"  ><br>
         <input id="receber" type="text" name="area_interesse" placeholder="área de interesse" ><br>
 
         <button id="enviar_01" type="submit">enviar</button><br>
-        <a href="#">vizualizar pá</a>
+        <a id="incricoes" href="usuarios.php">vizualizar incrição</a>
     </form>
     </section>
     </article>
-    </main>
+    </article>
 </body>
 </html>
